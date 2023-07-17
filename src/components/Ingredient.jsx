@@ -4,8 +4,6 @@ import styles from "./Ingredient.css";
 function Ingredient(props) {
 	const { name, chineseName, notes, amount, index } = props;
 	const wrapperClassName = index % 2 === 0 ? "wrapper" : "wrapperred";
-	console.log(index);
-	console.log(wrapperClassName);
 	return (
 		<div className={wrapperClassName}>
 			<div className="left">
