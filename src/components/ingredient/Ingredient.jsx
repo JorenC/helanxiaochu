@@ -8,13 +8,22 @@ function Ingredient(props) {
 		index % 2 === 0 ? "ingredientWrapper" : "ingredientWrapperRed";
 	const chineseName = jsonData[name] || ""; // Check if the name exists in the JSON
 
+	//Check whether notes are passed, otherwise add 2 padding to top to align single item elements.
+	const ingredientNameClassName = notes
+		? "ingredientName"
+		: "ingredientNameWithPadding";
+
+	const ingredientChineseNameClassName = notes
+		? "ingredientChineseName"
+		: "ingredientChineseNameWithPadding";
+
 	return (
 		<div className={wrapperClassName}>
 			<div className="ingredientLeft">
 				<div className="ingredientChineseWrapper">
-					<div className="ingredientName">{name}</div>
+					<div className={ingredientNameClassName}>{name}</div>
 					{chineseName && (
-						<div className="ingredientChineseName">
+						<div className={ingredientChineseNameClassName}>
 							{chineseName}
 						</div>
 					)}

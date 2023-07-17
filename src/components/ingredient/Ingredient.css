@@ -24,10 +24,25 @@
   text-align: left;
   font-family: "Proxima Nova", Georgia, sans-serif;
 }
+.ingredientNameWithPadding {
+  font-family: "proxima nova";
+  font-size: 20px;
+  text-transform: capitalize;
+  line-height: 24px;
+  text-align: left;
+  font-family: "Proxima Nova", Georgia, sans-serif;
+  padding-top: 4px;
+}
 .ingredientChineseName {
   padding-left: 4px;
   color: rgba(0, 0, 0, 0.37);
   text-align: left;
+}
+.ingredientChineseNameWithPadding {
+  padding-left: 4px;
+  color: rgba(0, 0, 0, 0.37);
+  text-align: left;
+  padding-top: 4px;
 }
 .ingredientNotes {
   font-family: "proxima nova";
