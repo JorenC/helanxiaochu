@@ -53,11 +53,8 @@ function Cookstep(props) {
 	const imageFilename = `../recipes/ganbiansijidou/ganbiansijidou.${step}.jpg`;
 
 	return (
-		<div>
-			<div className="cookStepImage">
-				{" "}
-				<img src={imageFilename} alt={`Step ${step}`} />
-			</div>
+		<div className="cookStepImageWrapper">
+			<img src={imageFilename} alt={`Step ${step}`} />
 			<div className="cookStepWrapper">
 				<div>
 					<div className="cookStepCounter">

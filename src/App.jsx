@@ -1,21 +1,19 @@
+import { useEffect, useState } from "react";
 import { Recipe } from "cooklang";
 import Ingredient from "./components/ingredient/Ingredient";
 import Cookstep from "./components/cookstep/Cookstep";
 import Remark from "./components/remark/Remark";
 
 function App() {
-  const recipeString = `>> preparation: 15 minutes
->> cook time: 20 minutes
->> servings: 4
->> remark: Don't use western vermicelli, but get vermicelli (or glass) noodles from any Asian grocery store (e.g. Lungkow Vermicelli in Amazing Oriental)
+  const [recipeString, setRecipeString] = useState(""); // Initialize recipeString as an empty string
 
-Wash the @green beans{500%gr // top & bottom removed, halved} and pat them dry with a kitchen towel. Heat @vegetable oil{¼ cup // or sunflower oil} in a #wok over medium high heat. Fry the beans in one layer (requires two batches). They're done once they appear wrinkled and slightly scorched, after about 5 minutes. Use a #strainer to remove the beans and set aside.
+  useEffect(() => {
+    // Fetch the JSON file and retrieve its contents
+    fetch("../public/recipes/ganbiansijidou/ganbiansijidou.js")
+      .then((response) => response.json())
+      .then((data) => setRecipeString(data.recipe));
+  }, []);
 
-Turn off the heat and scoop the oil out of the pan, except for 1 tbsp. Turn the heat to low, and add the @sichuan peppercorns{2 tsp}, @ginger{1 tsp // minced}, @garlic{3 cloves // minced} and @dried red chilies{3 // deseeded and sliced}. Stir-fry for about 1 minute, until fragrant.
-
-Next, add in the @ground pork or chicken{125 gr // or vegetarian alternative} and turn up the heat to high. Stir-fry quickly to break up the pork until the meat is browned slightly.
-
-Add in the fried green beans, @Shiao Hsing wine{1 tbsp}, @light soy sauce{1 tbsp}, @dark soy sauce{¼ tsp}, and @sugar{¼ tsp}. Toss everything well, and add @salt{to taste}. Serve hot with steamed white rice and other dishes.`; // <- Your CookLang recipe
   const recipe = new Recipe(recipeString);
 
   //Check if there is a remark in the recipe. If so, store it.
