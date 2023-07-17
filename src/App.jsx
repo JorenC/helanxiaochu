@@ -9,7 +9,7 @@ function App() {
 
   useEffect(() => {
     // Fetch the JSON file and retrieve its contents
-    fetch("../public/recipes/ganbiansijidou/ganbiansijidou.js")
+    fetch("./recipes/ganbiansijidou/ganbiansijidou.js")
       .then((response) => response.json())
       .then((data) => setRecipeString(data.recipe));
   }, []);
