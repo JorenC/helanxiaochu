@@ -21,16 +21,24 @@
   font-size: 20px;
   text-transform: capitalize;
   line-height: 24px;
+  text-align: left;
+  font-family: "Proxima Nova", Georgia, sans-serif;
 }
 .chineseName {
   padding-left: 4px;
   color: rgba(0, 0, 0, 0.37);
+  text-align: left;
 }
 .notes {
   font-family: "proxima nova";
   font-size: 16px;
   color: rgba(0, 0, 0, 0.37);
   margin-top: -4px;
+  text-align: left;
+  font-family: "Proxima Nova", Georgia, sans-serif;
+}
+.notes::first-letter {
+  text-transform: capitalize;
 }
 .right {
   font-family: "proxima nova";
@@ -39,4 +47,5 @@
   vertical-align: middle;
   display: flex;
   align-items: center;
+  font-family: "Proxima Nova", Georgia, sans-serif;
 }
