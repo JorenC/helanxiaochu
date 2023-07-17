@@ -1,22 +1,22 @@
-.wrapper {
+.ingredientWrapper {
   display: flex;
   justify-content: space-between;
   padding: 4px 0 4px 0;
   width: 100%;
 }
-.wrapperred {
+.ingredientWrapperRed {
   display: flex;
   justify-content: space-between;
   padding: 4px 0 4px 0;
   width: 100%;
   background-color: rgba(205, 22, 25, 0.03);
 }
-.left {
+.ingredientLeft {
 }
-.chineseWrapper {
+.ingredientChineseWrapper {
   display: flex;
 }
-.name {
+.ingredientName {
   font-family: "proxima nova";
   font-size: 20px;
   text-transform: capitalize;
@@ -24,12 +24,12 @@
   text-align: left;
   font-family: "Proxima Nova", Georgia, sans-serif;
 }
-.chineseName {
+.ingredientChineseName {
   padding-left: 4px;
   color: rgba(0, 0, 0, 0.37);
   text-align: left;
 }
-.notes {
+.ingredientNotes {
   font-family: "proxima nova";
   font-size: 16px;
   color: rgba(0, 0, 0, 0.37);
@@ -37,10 +37,10 @@
   text-align: left;
   font-family: "Proxima Nova", Georgia, sans-serif;
 }
-.notes::first-letter {
+.ingredientNotes::first-letter {
   text-transform: capitalize;
 }
-.right {
+.ingredientRight {
   font-family: "proxima nova";
   font-size: 20px;
   color: rgba(0, 0, 0, 0.37);
