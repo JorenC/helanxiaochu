@@ -1,5 +1,5 @@
 import { Recipe } from "cooklang";
-import Ingredient from "./components/Ingredient";
+import Ingredient from "./components/ingredient/Ingredient";
 
 function App() {
   const recipeString = `>> preparation: 15 minutes

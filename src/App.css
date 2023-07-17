@@ -1,14 +1,3 @@
-#root {
-  max-width: 1280px;
-  margin: 0 auto;
-  padding: 2rem;
-  text-align: center;
-  font-family: "Proxima Nova", Georgia, sans-serif;
-}
-
-#h1 {
-  font-family: "Proxima Nova", Georgia, sans-serif;
-}
 .logo {
   height: 6em;
   padding: 1.5em;
