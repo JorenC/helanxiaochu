@@ -1,6 +1,7 @@
 .cookStepWrapper {
   display: flex;
   align-items: center;
+  margin: 16px 0;
 }
 .cookStepCounter {
   margin: 4px 16px 8px 0;

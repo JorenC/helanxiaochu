@@ -6,12 +6,12 @@ function Remark(props) {
 	const { remark } = props;
 
 	return (
-		<div class="remarkWrapper">
-			<div class="remarkIcon">
+		<div className="remarkWrapper">
+			<div className="remarkIcon">
 				<img src={remarkOrnament} alt="Ornamental Icon" />
 			</div>
-			<div class="remarkContent">{remark}</div>
-			<div class="remarkIcon">
+			<div className="remarkContent">{remark}</div>
+			<div className="remarkIcon">
 				<img src={remarkOrnament} alt="Ornamental Icon" />
 			</div>
 		</div>

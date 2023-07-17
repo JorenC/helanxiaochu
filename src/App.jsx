@@ -56,7 +56,9 @@ Add in the fried green beans, @Shiao Hsing wine{1 tbsp}, @light soy sauce{1 tbsp
       ))}
       {/* Render the remark if it exists */}
       {remark && <Remark remark={remark} />}
-      <Cookstep />
+      {recipe.steps.map((step, index) => (
+        <Cookstep key={index} step={index + 1} content={step} />
+      ))}
     </>
   );
 }

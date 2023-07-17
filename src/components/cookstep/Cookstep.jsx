@@ -3,26 +3,69 @@ import styles from "./Cookstep.css";
 
 function Cookstep(props) {
 	const { step, content } = props;
+
+	// Function to convert numbers to Chinese equivalent
+	const convertToChineseNumber = (number) => {
+		const chineseNumbers = [
+			"一",
+			"二",
+			"三",
+			"四",
+			"五",
+			"六",
+			"七",
+			"八",
+			"九",
+			"十",
+		];
+		return chineseNumbers[number - 1];
+	};
+
+	const chineseStepNumber = convertToChineseNumber(step);
+
+	// Function to format the step content
+	const formatStepContent = (content) => {
+		const formattedContent = content.map((item, index) => {
+			if (typeof item === "string") {
+				return item; // Return regular text as is
+			} else if (item.name) {
+				// Return ingredients as red text
+				return (
+					<span key={index} style={{ color: "#CD1619" }}>
+						{item.name}
+					</span>
+				);
+			} else {
+				// Return cookware as blue text
+				return (
+					<span key={index} style={{ color: "blue" }}>
+						{item.raw}
+					</span>
+				);
+			}
+		});
+		return formattedContent;
+	};
+
+	const formattedContent = formatStepContent(content.line);
+
+	// Dynamically construct the image filename
+	const imageFilename = `../recipes/ganbiansijidou/ganbiansijidou.${step}.jpg`;
+
 	return (
-		<div class="cookStepWrapper">
-			<div>
-				<div class="cookStepCounter">
-					<div class="cookStepCounterNumber">二</div>
-				</div>
-				<div class="cookStepContent">
-					A lot of text, even more text and even more text it's easier
-					to write text than to customely sdaflkn sadflkj asdflk;j
-					asdfksna dbrasl;dkfn asfdkn askdfjb sakdlfn asdlkfj sakdjf
-					sakljdj sfd A lot of text, even more text and even more text
-					it's easier to write text than to customely sdaflkn sadflkj
-					asdflk;j asdfksna dbrasl;dkfn asfdkn askdfjb sakdlfn asdlkfj
-					sakdjf sakljdj sfdA lot of text, even more text and even
-					more text it's easier to write text than to customely
-					sdaflkn sadflkj asdflk;j asdfksna dbrasl;dkfn asfdkn askdfjb
-					sakdlfn asdlkfj sakdjf sakljdj sfdA lot of text, even more
-					text and even more text it's easier to write text than to
-					customely sdaflkn sadflkj asdflk;j asdfksna dbrasl;dkfn
-					asfdkn askdfjb sakdlfn asdlkfj sakdjf sakljdj sfd
+		<div>
+			<div className="cookStepImage">
+				{" "}
+				<img src={imageFilename} alt={`Step ${step}`} />
+			</div>
+			<div className="cookStepWrapper">
+				<div>
+					<div className="cookStepCounter">
+						<div className="cookStepCounterNumber">
+							{chineseStepNumber}
+						</div>
+					</div>
+					<div className="cookStepContent">{formattedContent}</div>
 				</div>
 			</div>
 		</div>
