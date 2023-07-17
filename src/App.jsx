@@ -1,5 +1,6 @@
 import { Recipe } from "cooklang";
 import Ingredient from "./components/ingredient/Ingredient";
+import Cookstep from "./components/cookstep/Cookstep";
 import Remark from "./components/remark/Remark";
 
 function App() {
@@ -16,6 +17,11 @@ Next, add in the @ground pork or chicken{125 gr // or vegetarian alternative} an
 
 Add in the fried green beans, @Shiao Hsing wine{1 tbsp}, @light soy sauce{1 tbsp}, @dark soy sauce{¼ tsp}, and @sugar{¼ tsp}. Toss everything well, and add @salt{to taste}. Serve hot with steamed white rice and other dishes.`; // <- Your CookLang recipe
   const recipe = new Recipe(recipeString);
+  //Check if there is a remark in the recipe. If so, store it.
+  const remarkMetadata = recipe.metadata.find(
+    (metadata) => metadata.key === "remark"
+  );
+  const remark = remarkMetadata ? remarkMetadata.value : null;
 
   console.log(recipe);
 
@@ -48,7 +54,9 @@ Add in the fried green beans, @Shiao Hsing wine{1 tbsp}, @light soy sauce{1 tbsp
           />{" "}
         </div>
       ))}
-      <Remark />
+      {/* Render the remark if it exists */}
+      {remark && <Remark remark={remark} />}
+      <Cookstep />
     </>
   );
 }

@@ -10,11 +10,7 @@ function Remark(props) {
 			<div class="remarkIcon">
 				<img src={remarkOrnament} alt="Ornamental Icon" />
 			</div>
-			<div class="remarkContent">
-				Don't use western vermicelli, but get vermicelli (or glass)
-				noodles from any Asian grocery store (e.g. Lungkow Vermicelli in
-				Amazing Oriental)
-			</div>
+			<div class="remarkContent">{remark}</div>
 			<div class="remarkIcon">
 				<img src={remarkOrnament} alt="Ornamental Icon" />
 			</div>
