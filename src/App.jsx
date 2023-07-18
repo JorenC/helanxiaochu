@@ -3,6 +3,7 @@ import { Recipe } from "cooklang";
 import Ingredient from "./components/ingredient/Ingredient";
 import Cookstep from "./components/cookstep/Cookstep";
 import Remark from "./components/remark/Remark";
+import styles from "./App.css";
 
 function App() {
   const [recipeString, setRecipeString] = useState(""); // Initialize recipeString as an empty string
@@ -26,38 +27,42 @@ function App() {
 
   return (
     <>
-      <h1>INGREDIENTS</h1>
-      {recipe.ingredients.map((ingredient, index) => (
-        <div key={index}>
-          <Ingredient
-            name={ingredient.name}
-            notes={
-              ingredient.amount.includes("//") ||
-              ingredient.units.includes("//")
-                ? ingredient.amount.split("//")[1] ||
-                  ingredient.units.split("//")[1]
-                : ""
-            }
-            amount={
-              isNaN(ingredient.quantity) || ingredient.quantity === 0
-                ? ingredient.amount.includes("//")
-                  ? ingredient.amount.split("//")[0]
-                  : ingredient.amount
-                : ingredient.quantity +
-                  " " +
-                  (ingredient.units.includes("//")
-                    ? ingredient.units.split("//")[0]
-                    : ingredient.units)
-            }
-            index={index} // Pass the index as a prop
-          />{" "}
+      <div className="recipeCard">
+        <div className="ingredients">
+          <h1>INGREDIENTS</h1>
+          {recipe.ingredients.map((ingredient, index) => (
+            <div key={index}>
+              <Ingredient
+                name={ingredient.name}
+                notes={
+                  ingredient.amount.includes("//") ||
+                  ingredient.units.includes("//")
+                    ? ingredient.amount.split("//")[1] ||
+                      ingredient.units.split("//")[1]
+                    : ""
+                }
+                amount={
+                  isNaN(ingredient.quantity) || ingredient.quantity === 0
+                    ? ingredient.amount.includes("//")
+                      ? ingredient.amount.split("//")[0]
+                      : ingredient.amount
+                    : ingredient.quantity +
+                      " " +
+                      (ingredient.units.includes("//")
+                        ? ingredient.units.split("//")[0]
+                        : ingredient.units)
+                }
+                index={index} // Pass the index as a prop
+              />{" "}
+            </div>
+          ))}
+          {/* Render the remark if it exists */}
+          {remark && <Remark remark={remark} />}
         </div>
-      ))}
-      {/* Render the remark if it exists */}
-      {remark && <Remark remark={remark} />}
-      {recipe.steps.map((step, index) => (
-        <Cookstep key={index} step={index + 1} content={step} />
-      ))}
+        {recipe.steps.map((step, index) => (
+          <Cookstep key={index} step={index + 1} content={step} />
+        ))}
+      </div>
     </>
   );
 }

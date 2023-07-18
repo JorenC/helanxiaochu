@@ -1,35 +1,28 @@
-.logo {
-  height: 6em;
-  padding: 1.5em;
-  will-change: filter;
-  transition: filter 300ms;
-}
-.logo:hover {
-  filter: drop-shadow(0 0 2em #646cffaa);
-}
-.logo.react:hover {
-  filter: drop-shadow(0 0 2em #61dafbaa);
-}
-
-@keyframes logo-spin {
-  from {
-    transform: rotate(0deg);
+@media only screen and (min-width: 864px) {
+  .recipeCard {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    gap: 19px 19px;
+    grid-template-areas:
+      "cookStepStep1 cookStepStep2 Ingredients"
+      "cookStepStep3 cookStepStep4 Ingredients";
   }
-  to {
-    transform: rotate(360deg);
+
+  .ingredients {
+    grid-area: Ingredients;
   }
-}
 
-@media (prefers-reduced-motion: no-preference) {
-  a:nth-of-type(2) .logo {
-    animation: logo-spin infinite 20s linear;
+  .cookStepStep1 {
+    grid-area: cookStepStep1;
   }
-}
-
-.card {
-  padding: 2em;
-}
-
-.read-the-docs {
-  color: #888;
+  .cookStepStep2 {
+    grid-area: cookStepStep2;
+  }
+  .cookStepStep3 {
+    grid-area: cookStepStep3;
+  }
+  .cookStepStep4 {
+    grid-area: cookStepStep4;
+  }
 }
