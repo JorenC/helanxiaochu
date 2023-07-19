@@ -1,0 +1,28 @@
+@media only screen and (min-width: 864px) {
+  .recipeCard {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    gap: 19px 19px;
+    grid-template-areas:
+      "cookStepStep1 cookStepStep2 Ingredients"
+      "cookStepStep3 cookStepStep4 Ingredients";
+  }
+
+  .recipeCardIngredients {
+    grid-area: Ingredients;
+  }
+
+  .recipeCardCookStepStep1 {
+    grid-area: cookStepStep1;
+  }
+  .recipeCardCookStepStep2 {
+    grid-area: cookStepStep2;
+  }
+  .recipeCardCookStepStep3 {
+    grid-area: cookStepStep3;
+  }
+  .recipeCardCookStepStep4 {
+    grid-area: cookStepStep4;
+  }
+}
