@@ -1,10 +1,10 @@
 import { useEffect, useState } from "react";
 import { Recipe } from "cooklang";
-import Ingredient from "../ingredient/Ingredient";
-import Cookstep from "../cookstep/Cookstep";
-import Remark from "../remark/Remark";
-import styles from "./RecipeCard.css";
-import { fetchRecipe } from "../fetchrecipe/FetchRecipe";
+import Ingredient from "../../components/ingredient/Ingredient";
+import Cookstep from "../../components/cookstep/Cookstep";
+import Remark from "../../components/remark/Remark";
+import styles from "./RecipePage.css";
+import { fetchRecipe } from "../../components/fetchrecipe/FetchRecipe";
 
 function RecipeCard() {
   const [recipeString, setRecipeString] = useState("");
