@@ -50,7 +50,7 @@ function Cookstep(props) {
 	const formattedContent = formatStepContent(content.line);
 
 	// Dynamically construct the image filename
-	const imageFilename = `./recipes/ganbiansijidou/ganbiansijidou.${step}.jpg`;
+	const imageFilename = `../recipes/ganbiansijidou/ganbiansijidou.${step}.jpg`;
 
 	return (
 		<div className={`recipeCardCookStepStep${step}`}>
