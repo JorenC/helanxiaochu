@@ -82,7 +82,12 @@ function RecipeCard() {
           {remark && <Remark remark={remark} />}
         </div>
         {recipe.steps.map((step, index) => (
-          <Cookstep key={index} step={index + 1} content={step} />
+          <Cookstep
+            key={index}
+            step={index + 1}
+            content={step}
+            recipeName={currentRecipe}
+          />
         ))}
       </div>
     </>

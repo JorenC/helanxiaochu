@@ -2,7 +2,7 @@ import React from "react";
 import styles from "./Cookstep.css";
 
 function Cookstep(props) {
-	const { step, content } = props;
+	const { step, content, recipeName } = props;
 
 	// Function to convert numbers to Chinese equivalent
 	const convertToChineseNumber = (number) => {
@@ -50,7 +50,7 @@ function Cookstep(props) {
 	const formattedContent = formatStepContent(content.line);
 
 	// Dynamically construct the image filename
-	const imageFilename = `../recipes/ganbiansijidou/ganbiansijidou.${step}.jpg`;
+	const imageFilename = `../recipes/${recipeName}/${recipeName}.${step}.jpg`;
 
 	return (
 		<div className={`recipeCardCookStepStep${step}`}>
