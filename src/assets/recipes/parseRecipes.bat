@@ -33,6 +33,13 @@ for %%f in (*.cook) do (
 REM Add the closing bracket to the JSON object
 echo } >> %outputFile%
 
+REM Add two more lines
+echo. >> %outputFile%
+echo // Add your custom additional data here >> %outputFile%
+
+REM Add "export default recipesData;" to the end of the file
+echo export default recipesData; >> %outputFile%
+
 echo "JSON file with recipes created: %outputFile%"
 exit /b
 
