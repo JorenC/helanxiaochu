@@ -1,26 +1,25 @@
 import { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
 
+// Get the recipe
+//TODO:
+//Add all recipes to one JSON + BAT file
+//Load all recipes to recipes subfile.
+//Use useParams to get the current recipe
+//Render the current recipe
+//Get the right pictures.
+//Catch error state if useparams is unknown.
+
 import { Recipe } from "cooklang";
 import Ingredient from "../../components/ingredient/Ingredient";
 import Cookstep from "../../components/cookstep/Cookstep";
 import Remark from "../../components/remark/Remark";
 import styles from "./RecipePage.css";
-import { useRecipeFetcher } from "../../components/userecipefetcher/UseRecipeFetcher";
+//import { useRecipeFetcher } from "../../components/userecipefetcher/UseRecipeFetcher";
+import recipesData from "../../assets/recipes/recipes.js"; // Import the recipesData object
 
 function RecipeCard() {
-  // Get the recipe
-  //TODO:
-  //Add all recipes to one JSON + BAT file
-  //Load all recipes to recipes subfile.
-  //Use useParams to get the current recipe
-  //Render the current recipe
-  //Get the right pictures.
-  //Catch error state if useparams is unknown.
-
-  // const currentRecipe = "ganbiansijidou";
   // const recipeFilePath = `../recipes/${currentRecipe}/${currentRecipe}.js`;
-  // const recipeString = useRecipeFetcher(currentRecipe, recipeFilePath);
 
   const recipes = {
     ganbiansijidou:
@@ -34,7 +33,8 @@ function RecipeCard() {
   const recipeParams = useParams();
   const currentRecipe = recipeParams.recipeId;
   console.log(currentRecipe);
-  let recipeString = recipes[currentRecipe];
+  let recipeString = recipesData[currentRecipe];
+  //let recipeString = recipes[currentRecipe];
 
   //Convert the recipe
   const recipe = new Recipe(recipeString);

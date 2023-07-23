@@ -1,12 +1,12 @@
 import { useEffect, useState } from "react";
 
-export function useRecipeFetcher(currentRecipe, recipeFilePath) {
+export function useRecipeFetcher() {
   const [recipeString, setRecipeString] = useState("");
 
   useEffect(() => {
     async function fetchData() {
       try {
-        const response = await fetch(recipeFilePath);
+        const response = await fetch("./recipes.js");
         const data = await response.json();
         setRecipeString(data.recipe);
       } catch (error) {
@@ -17,7 +17,7 @@ export function useRecipeFetcher(currentRecipe, recipeFilePath) {
     }
 
     fetchData();
-  }, [recipeFilePath]);
+  }, []);
 
   return recipeString;
 }
