@@ -6,7 +6,8 @@ export default function MainPage() {
   return (
     <>
       <div id="mainpage">
-        <h1>MainPage</h1>
+        <h1>荷兰小厨</h1>
+        HELAN XIAOCHU
         {Object.keys(recipesData).map((recipeName) => (
           <RecipeCard key={recipeName} name={recipeName} />
         ))}
