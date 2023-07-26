@@ -6,7 +6,7 @@ import styles from "./MainPage.css";
 export default function MainPage() {
   return (
     <>
-      <div id="mainpage">
+      <div className="mainPage">
         <div className="mainPageHeader">
           <img src="../logo_large.svg" height="50px" />
           <h1>荷兰小厨</h1>

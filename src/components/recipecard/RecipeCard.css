@@ -1,32 +1,39 @@
 .RecipeCardWrapper {
   display: flex;
-  align-items: center;
+  flex-direction: column;
+  align-items: left;
   margin-bottom: 24px;
 }
 
 .RecipeCardImageWrapper {
-  width: 200px;
+  width: 400px;
+  height: 150px;
   overflow: hidden;
+  border-radius: 12px 12px 12px 12px;
 }
 .RecipeCardImageWrapper img {
   max-width: 100%;
   height: auto;
+  align-items: left;
   display: block; /* Optional: Removes any extra spacing that might occur */
 }
 
 .RecipeCardTextWrapper {
-  padding-left: 24px;
-  margin-left: 24px;
-  border-left: 1px solid rgb(205, 22, 25);
 }
 .RecipeCardEnglishName {
-  font-size: 30px;
+  padding-left: 12px;
+  font-size: 18px;
   text-transform: uppercase;
+  margin-top: 8px;
+  border-left: 1px solid rgb(205, 22, 25);
 }
 
 .RecipeCardChineseName {
+  padding-left: 12px;
   text-align: left;
   color: rgb(205, 22, 25);
   font-weight: 100;
-  font-size: 20px;
+  margin-bottom: 8px;
+  font-size: 14px;
+  border-left: 1px solid rgb(205, 22, 25);
 }

@@ -28,7 +28,7 @@ function RecipeCard(props) {
 	return (
 		<Link to={`./recipe/${name}`} className="RecipeCardWrapper">
 			<div class="RecipeCardImageWrapper">
-				<img src={imageFilename} alt={formattedName} width="200px" />
+				<img src={imageFilename} alt={formattedName} />
 			</div>
 			<div className="RecipeCardTextWrapper">
 				<h1 class="RecipeCardEnglishName">{formattedName}</h1>

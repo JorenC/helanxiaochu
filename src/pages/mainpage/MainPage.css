@@ -8,3 +8,7 @@
 .mainPageHeader img {
   margin-right: 24px;
 }
+
+.mainPage {
+  width: 100%; /*TODO: fix the width of the main menu */
+}
