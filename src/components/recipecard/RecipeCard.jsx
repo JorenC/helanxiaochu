@@ -33,12 +33,12 @@ function RecipeCard(props) {
 
 	return (
 		<Link to={`./recipe/${name}`} className="RecipeCardWrapper">
-			<div class="RecipeCardImageWrapper">
+			<div className="RecipeCardImageWrapper">
 				<img src={imageFilename} alt={formattedName} />
 			</div>
 			<div className="RecipeCardTextWrapper">
-				<h1 class="RecipeCardEnglishName">{formattedName}</h1>
-				<div class="RecipeCardChineseName">{chineseName}</div>
+				<h1 className="RecipeCardEnglishName">{formattedName}</h1>
+				<div className="RecipeCardChineseName">{chineseName}</div>
 			</div>
 		</Link>
 	);
