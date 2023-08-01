@@ -17,11 +17,12 @@ function RecipeCard(props) {
 		"red-braised-chicken-drums": "红烧鸡腿",
 		"stir-fried-pak-choy-with-tofu-puffs": "豆包小白菜",
 		"eggplant-with-garlic-sauce": "鱼香茄子",
-		"braised-wheat-gluten-&-mushrooms": "四喜烤麸",
+		"braised-wheat-gluten-with-mushrooms": "四喜烤麸",
 		"glass-noodle-cabbage-stir-fry": "粉丝卷心菜",
 		"three-earthly-bounties": "地三鲜",
 		"four-ingredient-okra": "油拨秋葵",
 		"silken-tofu-with-soy-dressing": "葱油豆腐",
+		"tofu-with-century-egg-salad": "皮蛋豆腐",
 	};
 
 	// Get the Chinese name based on the English name

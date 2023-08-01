@@ -8,10 +8,12 @@
 
 .RecipeCardImageWrapper {
   width: 100%;
-
   height: 150px;
+  display: flex; /* Add flex display */
+  justify-content: center; /* Center horizontally */
+  align-items: center; /* Center vertically */
   overflow: hidden;
-  border-radius: 12px 12px 12px 12px;
+  border-radius: 12px;
 }
 .RecipeCardImageWrapper img {
   max-width: 100%;
