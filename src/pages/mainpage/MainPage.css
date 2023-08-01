@@ -12,3 +12,10 @@
 .mainPage {
   width: 100%; /*TODO: fix the width of the main menu */
 }
+
+.mainPageRecipeContainer {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+}

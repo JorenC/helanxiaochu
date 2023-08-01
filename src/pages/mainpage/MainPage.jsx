@@ -11,9 +11,11 @@ export default function MainPage() {
           <img src="../logo_large.svg" height="50px" />
           <h1>荷兰小厨</h1>
         </div>
-        {Object.keys(recipesData).map((recipeName) => (
-          <RecipeCard key={recipeName} name={recipeName} />
-        ))}
+        <div className="mainPageRecipeContainer">
+          {Object.keys(recipesData).map((recipeName) => (
+            <RecipeCard key={recipeName} name={recipeName} />
+          ))}
+        </div>
       </div>
     </>
   );
