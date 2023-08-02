@@ -9,14 +9,40 @@
 .mainPageHeader {
   display: flex;
   justify-content: space-between;
+  position: relative;
 }
 
 .mainPageHeader img {
-  margin-right: 24px;
+  margin-right: 12px;
+  padding-right: 12px;
+  border-right: 1px solid rgb(205, 22, 25);
 }
 
 .mainPageBanner {
   display: flex;
+}
+
+.mainPageLogoContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.mainPageLogoTop {
+  padding: 0;
+  margin: 0;
+  t-size: 3em;
+  line-height: 1;
+}
+
+.mainPageLogoBottom {
+  padding: 0;
+  margin: 0;
+  text-align: left;
+  color: rgb(205, 22, 25);
+  font-weight: 100;
+  font-size: 18px;
+  line-height: 1;
 }
 
 .mainPage {
@@ -30,8 +56,11 @@
   justify-content: space-evenly;
 }
 
-#mainSearchInput[type="text"] {
-  width: 115px;
+#mainSearchInput[type="search"] {
+  position: absolute;
+  right: 0;
+
+  width: 125px;
   height: 40px;
   box-sizing: border-box;
   border: 2px solid #ccc;
@@ -46,7 +75,7 @@
   transition: width 0.4s ease-in-out;
 }
 
-#mainSearchInput[type="text"]:focus {
+#mainSearchInput[type="search"]:focus {
   width: 280px;
   background-image: url("./public/magnify-red.svg");
   border: 2px solid rgb(205, 22, 25) !important;

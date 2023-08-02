@@ -22,11 +22,16 @@ export default function MainPage() {
         <div className="mainPageHeader">
           <div className="mainPageBanner">
             <img src="../logo_large.svg" height="50px" alt="logo" />
-            <h1>荷兰小厨</h1>
+            <div className="mainPageLogoContainer">
+              <h1 className="mainPageLogoTop">Helan Xiaochu</h1>
+              <span className="mainPageLogoBottom">
+                Chinese food for everyone
+              </span>
+            </div>
           </div>
           <input
             id="mainSearchInput"
-            type="text"
+            type="search"
             name="search"
             placeholder="Search.."
             value={searchInput}
