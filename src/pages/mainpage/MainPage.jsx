@@ -21,7 +21,6 @@ export default function MainPage() {
       <div className="mainPage">
         <div className="mainPageHeader">
           <div className="mainPageBanner">
-            <img src="../logo_large.svg" height="50px" alt="logo" />
             <div className="mainPageLogoContainer">
               <h1 className="mainPageLogoTop">Helan Xiaochu</h1>
               <span className="mainPageLogoBottom">

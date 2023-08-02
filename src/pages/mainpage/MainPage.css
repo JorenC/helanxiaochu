@@ -1,25 +1,27 @@
 .mainPageHeader {
   display: flex;
-  justify-content: center;
-  font-size: 14px;
-  align-items: center;
-  margin: 0px 18px 40px 18px;
-}
-
-.mainPageHeader {
-  display: flex;
   justify-content: space-between;
   position: relative;
+  margin-bottom: 20px;
 }
 
-.mainPageHeader img {
-  margin-right: 12px;
-  padding-right: 12px;
-  border-right: 1px solid rgb(205, 22, 25);
-}
-
-.mainPageBanner {
+.mainPageHeader .mainPageBanner {
   display: flex;
+  align-items: center;
+}
+
+.mainPageHeader .mainPageBanner::before {
+  content: "";
+  display: block;
+  width: 50px;
+  height: 100%;
+  background-image: url("../logo_large.svg");
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  margin-right: 12px;
+  padding-right: 50px;
+  border-right: 1px solid rgb(205, 22, 25);
 }
 
 .mainPageLogoContainer {
