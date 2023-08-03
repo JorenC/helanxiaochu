@@ -2,8 +2,10 @@
   display: flex;
   flex-direction: column;
   align-items: left;
-  margin: 5px 5px;
-  max-width: 400px;
+  margin: 5px 10px;
+  min-width: 300px;
+  max-width: 500px;
+  flex-grow: 1;
 }
 
 .RecipeCardImageWrapper {
@@ -22,8 +24,6 @@
   display: block; /* Optional: Removes any extra spacing that might occur */
 }
 
-.RecipeCardTextWrapper {
-}
 .RecipeCardEnglishName {
   padding-left: 12px;
   font-size: 18px;
@@ -42,4 +42,20 @@
   margin-bottom: 8px;
   font-size: 14px;
   border-left: 1px solid rgb(205, 22, 25);
+}
+
+@media (min-width: 704px) {
+  .RecipeCardWrapper {
+    max-width: calc(
+      50% - 20px
+    ); /* Set the maximum width to 50% minus the margin */
+  }
+}
+
+@media (min-width: 1150px) {
+  .RecipeCardWrapper {
+    max-width: calc(
+      33% - 20px
+    ); /* Set the maximum width to 50% minus the margin */
+  }
 }

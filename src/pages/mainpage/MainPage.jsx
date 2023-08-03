@@ -6,6 +6,7 @@ import styles from "./MainPage.css";
 
 export default function MainPage() {
   const [searchInput, setSearchInput] = useState("");
+
   const filteredRecipes = Object.entries(recipesData).filter(
     ([recipeName, recipeData]) =>
       recipeName.toLowerCase().includes(searchInput.toLowerCase()) ||
@@ -32,7 +33,7 @@ export default function MainPage() {
             id="mainSearchInput"
             type="search"
             name="search"
-            placeholder="Search.."
+            placeholder="Search"
             value={searchInput}
             onChange={handleSearchInputChange}
           />
