@@ -23,6 +23,9 @@ function RecipeCard(props) {
 		"four-ingredient-okra": "油拨秋葵",
 		"silken-tofu-with-soy-dressing": "葱油豆腐",
 		"tofu-with-century-egg-salad": "皮蛋豆腐",
+		"stir-fried-lettuce": "炒生菜",
+		"chili-garlic-shrimp": "辣椒酱炒鲜虾",
+		"tomato-and-egg-stir-fry": "番茄炒鸡蛋",
 	};
 
 	// Get the Chinese name based on the English name

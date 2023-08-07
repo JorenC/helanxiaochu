@@ -51,73 +51,83 @@
   justify-content: space-evenly;
 }
 
-@media (min-width: 704px) {
-  .mainPageRecipeContainer {
-    justify-content: flex-start; /* Align items to the start of the container */
-  }
+.mainPageLogoTop {
+  padding: 0;
+  margin: 0;
+  font-size: 3em;
+  line-height: 1;
 }
+
 #mainSearchInput[type="search"] {
   position: absolute;
   right: 18px;
-  top: 0%;
+  top: 50%;
+  transform: translateY(-50%);
   width: 105px;
-  height: 100%;
+  height: 40px;
   box-sizing: border-box;
-  border: none;
+  border: 2px solid #ccc;
+  border-radius: 4px;
   font-size: 16px;
   background-color: white;
   background-image: url("./public/magnify.svg");
   background-size: 24px 24px;
-  background-position: 4px 16px;
+  background-position: 4px 8px;
   background-repeat: no-repeat;
   padding: 10px 0px 8px 36px;
   transition: width 0.4s ease-in-out;
 }
 
 #mainSearchInput[type="search"]:focus {
-  width: 100%;
-  border: none;
-  outline: none;
+  width: 280px;
+  background-image: url("./public/magnify-red.svg");
+  border: 2px solid rgb(205, 22, 25) !important;
 }
 
-.mainPageLogoTop {
-  padding: 0;
-  margin: 0;
-  font-size: 2em;
-  line-height: 1;
-}
-
-@media only screen and (min-width: 864px) {
-  .mainPageLogoTop {
-    padding: 0;
-    margin: 0;
-    font-size: 3em;
-    line-height: 1;
+/* 'Mobile view' */
+@media (max-width: 704px) {
+  .mainPageRecipeContainer {
+    justify-content: flex-start; /* Align items to the start of the container */
   }
 
   #mainSearchInput[type="search"] {
     position: absolute;
-    right: 18px;
+    right: 0px;
     top: 50%;
-    transform: translateY(-50%);
-    width: 105px;
-    height: 40px;
+    width: 26px;
+    height: 100%;
     box-sizing: border-box;
-    border: 2px solid #ccc;
-    border-radius: 4px;
+    border: none;
     font-size: 16px;
     background-color: white;
     background-image: url("./public/magnify.svg");
     background-size: 24px 24px;
-    background-position: 4px 8px;
+    background-position: 4px 4px;
     background-repeat: no-repeat;
     padding: 10px 0px 8px 36px;
     transition: width 0.4s ease-in-out;
   }
 
   #mainSearchInput[type="search"]:focus {
-    width: 280px;
-    background-image: url("./public/magnify-red.svg");
-    border: 2px solid rgb(205, 22, 25) !important;
+    width: 100%;
+    border: none;
+    outline: none;
+  }
+
+  .mainPageLogoTop {
+    padding: 0;
+    margin: 0;
+    line-height: 1;
+    font-size: 16px;
+  }
+
+  .mainPageLogoBottom {
+    font-size: 14px;
+  }
+
+  .mainPageHeader .mainPageBanner::before {
+    margin-right: 8px;
+    padding-right: 0px;
+    width: 46px;
   }
 }
