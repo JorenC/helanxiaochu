@@ -26,6 +26,7 @@ function RecipeCard(props) {
 		"stir-fried-lettuce": "炒生菜",
 		"chili-garlic-shrimp": "辣椒酱炒鲜虾",
 		"tomato-and-egg-stir-fry": "番茄炒鸡蛋",
+		"cola-chicken-wings": "可乐鸡翅"
 	};
 
 	// Get the Chinese name based on the English name

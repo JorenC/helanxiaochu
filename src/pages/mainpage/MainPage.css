@@ -21,7 +21,7 @@
   background-position: center;
   margin-right: 12px;
   padding-right: 50px;
-  border-right: 1px solid rgb(205, 22, 25);
+  border-right: 1px solid var(--highlight-color);
 }
 
 .mainPageLogoContainer {
@@ -34,7 +34,7 @@
   padding: 0;
   margin: 0;
   text-align: left;
-  color: rgb(205, 22, 25);
+  color: var(--highlight-color);
   font-weight: 100;
   font-size: 18px;
   line-height: 1;
@@ -70,9 +70,9 @@
   border-radius: 4px;
   font-size: 16px;
   background-color: white;
-  background-image: url("./public/magnify.svg");
+  background-image: url("./magnify.svg");
   background-size: 24px 24px;
-  background-position: 4px 8px;
+  background-position: 4px 8px; 
   background-repeat: no-repeat;
   padding: 10px 0px 8px 36px;
   transition: width 0.4s ease-in-out;
@@ -80,8 +80,9 @@
 
 #mainSearchInput[type="search"]:focus {
   width: 280px;
-  background-image: url("./public/magnify-red.svg");
+  background-image: url("./magnify-red.svg");
   border: 2px solid rgb(205, 22, 25) !important;
+  outline: 2px solid rbg(205, 22, 25) !important;
 }
 
 /* 'Mobile view' */
@@ -100,7 +101,7 @@
     border: none;
     font-size: 16px;
     background-color: white;
-    background-image: url("./public/magnify.svg");
+    background-image: url("./magnify.svg");
     background-size: 24px 24px;
     background-position: 4px 4px;
     background-repeat: no-repeat;

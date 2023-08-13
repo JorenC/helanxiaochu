@@ -5,13 +5,13 @@
 }
 .cookStepCounter {
   margin: 4px 16px 8px 0;
-  background-color: rgb(205, 22, 25);
+  background-color: var(--highlight-color);
   float: left;
   width: 46px;
   height: 46px;
   text-align: center;
   vertical-align: middle;
-  border-radius: 1000%;
+  border-radius: 100%;
 }
 .cookStepCounterNumber {
   margin-top: 8px;
