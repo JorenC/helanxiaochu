@@ -9,7 +9,7 @@
   justify-content: space-between;
   padding: 4px 0 4px 0;
   width: 100%;
-  background-color: rgba(205, 22, 25, 0.03);
+  background-color: ;
 }
 .ingredientLeft {
 }
@@ -40,14 +40,14 @@
 }
 .ingredientChineseNameWithPadding {
   padding-left: 4px;
-  color: rgba(0, 0, 0, 0.37);
+  color: var(--subtext-color);
   text-align: left;
   padding-top: 4px;
 }
 .ingredientNotes {
   font-family: "proxima nova";
   font-size: 16px;
-  color: rgba(0, 0, 0, 0.37);
+  color: var(--subtext-color);
   margin-top: -4px;
   text-align: left;
   font-family: "Proxima Nova", Georgia, sans-serif;
@@ -58,7 +58,7 @@
 .ingredientRight {
   font-family: "proxima nova";
   font-size: 20px;
-  color: rgba(0, 0, 0, 0.37);
+  color: var(--subtext-color);
   vertical-align: middle;
   display: flex;
   align-items: center;

@@ -70,7 +70,7 @@
   border-radius: 4px;
   font-size: 16px;
   background-color: white;
-  background-image: url("./magnify.svg");
+  background-image: url("../magnify.svg");
   background-size: 24px 24px;
   background-position: 4px 8px; 
   background-repeat: no-repeat;
@@ -80,9 +80,9 @@
 
 #mainSearchInput[type="search"]:focus {
   width: 280px;
-  background-image: url("./magnify-red.svg");
-  border: 2px solid rgb(205, 22, 25) !important;
-  outline: 2px solid rbg(205, 22, 25) !important;
+  background-image: url("../magnify-red.svg");
+  border: 1px solid var(--highlight-color) !important;
+  outline: 1px solid var(--highlight-color) !important;
 }
 
 /* 'Mobile view' */
@@ -101,9 +101,9 @@
     border: none;
     font-size: 16px;
     background-color: white;
-    background-image: url("./magnify.svg");
+    background-image: url("../magnify.svg");
     background-size: 24px 24px;
-    background-position: 4px 4px;
+    background-position: 4px 3px;
     background-repeat: no-repeat;
     padding: 10px 0px 8px 36px;
     transition: width 0.4s ease-in-out;
