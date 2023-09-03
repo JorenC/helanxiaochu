@@ -28,6 +28,7 @@ function RecipeCard(props) {
 		"tomato-and-egg-stir-fry": "番茄炒鸡蛋",
 		"cola-chicken-wings": "可乐鸡翅",
 		"spinach-salad": "凉拌菠菜",
+		"potato-beef-stew": "土豆吨牛肉",
 	};
 
 	// Get the Chinese name based on the English name
