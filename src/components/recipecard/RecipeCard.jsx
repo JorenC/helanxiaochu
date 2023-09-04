@@ -30,6 +30,7 @@ function RecipeCard(props) {
 		"spinach-salad": "凉拌菠菜",
 		"potato-beef-stew": "土豆吨牛肉",
 		"spicy-dried-tofu-with-garlic-sprouts": "香辣豆腐干炒蒜苗",
+		"sichuan-boiled-fish": "水煮鱼",
 	};
 
 	// Get the Chinese name based on the English name
