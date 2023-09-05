@@ -32,6 +32,7 @@ function RecipeCard(props) {
 		"spicy-dried-tofu-with-garlic-sprouts": "香辣豆腐干炒蒜苗",
 		"sichuan-boiled-fish": "水煮鱼",
 		"tiger-salad": "老虎菜",
+		"sichuan-mala-chicken": "辣子鸡",
 	};
 
 	// Get the Chinese name based on the English name
