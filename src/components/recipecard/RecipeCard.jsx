@@ -33,6 +33,7 @@ function RecipeCard(props) {
 		"sichuan-boiled-fish": "水煮鱼",
 		"tiger-salad": "老虎菜",
 		"sichuan-mala-chicken": "辣子鸡",
+		"sesame-cucumber-salad": "芝麻将黄瓜",
 	};
 
 	// Get the Chinese name based on the English name
