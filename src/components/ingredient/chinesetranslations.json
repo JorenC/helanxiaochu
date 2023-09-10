@@ -13,7 +13,7 @@
   "sugar": "糖",
   "salt": "盐",
   "cucumber": "黄瓜",
-  "Chinkiang vinegar": "香醋",
+  "c": "香醋",
   "rice vinegar": "白米醋",
   "sesame oil": "芝麻将",
   "hot chili oil": "油辣子",
@@ -61,5 +61,8 @@
   "coriander": "香菜",
   "pangasius fillet": "𩷶属",
   "chicken thigh filet": "鸡腿",
-  "sesame paste": "芝麻将"
+  "sesame paste": "芝麻将",
+  "chicken filet": "鸡肉",
+  "lemon": "柠檬",
+  "chili powder": "辣椒粉"
 }
