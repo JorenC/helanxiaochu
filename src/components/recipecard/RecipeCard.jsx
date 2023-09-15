@@ -33,6 +33,14 @@ function RecipeCard(props) {
 		"longan-sweet-soup": "龙眼水塘",
 		"xinjiang-cumin-lamb": "自然羊肉",
 		"sichuan-boiled-fish": "水煮鱼"
+		"spinach-salad": "凉拌菠菜",
+		"potato-beef-stew": "土豆吨牛肉",
+		"spicy-dried-tofu-with-garlic-sprouts": "香辣豆腐干炒蒜苗",
+		"sichuan-boiled-fish": "水煮鱼",
+		"tiger-salad": "老虎菜",
+		"sichuan-mala-chicken": "辣子鸡",
+		"sesame-cucumber-salad": "芝麻将黄瓜",
+		"steamed-eggplant-with-spicy-garlic-sauce": "清蒸茄子",
 	};
 
 	// Get the Chinese name based on the English name
