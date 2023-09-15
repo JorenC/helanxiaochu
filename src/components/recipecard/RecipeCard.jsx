@@ -32,7 +32,7 @@ function RecipeCard(props) {
 		"braised-bamboo-shoots": "油焖笋",
 		"longan-sweet-soup": "龙眼水塘",
 		"xinjiang-cumin-lamb": "自然羊肉",
-		"sichuan-boiled-fish": "水煮鱼"
+		"sichuan-boiled-fish": "水煮鱼",
 		"spinach-salad": "凉拌菠菜",
 		"potato-beef-stew": "土豆吨牛肉",
 		"spicy-dried-tofu-with-garlic-sprouts": "香辣豆腐干炒蒜苗",
