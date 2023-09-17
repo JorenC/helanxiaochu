@@ -2,8 +2,11 @@
   :root {
     --text-color: rgba(0,0,0,0.87);
     --title-color: rgb(0,0,0);
+    --subtext-color: rgba(0, 0, 0, 0.37);
     --highlight-color: rgb(205, 22, 25);
+    --transparent-highlight-color: rgba(205, 22, 25, 0.03)
     --background-color: #ffffff;
+
   }
 }
 

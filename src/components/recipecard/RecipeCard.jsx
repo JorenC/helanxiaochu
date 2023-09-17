@@ -27,6 +27,12 @@ function RecipeCard(props) {
 		"chili-garlic-shrimp": "辣椒酱炒鲜虾",
 		"tomato-and-egg-stir-fry": "番茄炒鸡蛋",
 		"cola-chicken-wings": "可乐鸡翅",
+		"fried-beans-with-olive-vegetable": "橄榄菜炒豆角",
+		"sichuan-nappa-cabbage-stir-fry": "酸辣白菜",
+		"braised-bamboo-shoots": "油焖笋",
+		"longan-sweet-soup": "龙眼水塘",
+		"xinjiang-cumin-lamb": "自然羊肉",
+		"sichuan-boiled-fish": "水煮鱼",
 		"spinach-salad": "凉拌菠菜",
 		"potato-beef-stew": "土豆吨牛肉",
 		"spicy-dried-tofu-with-garlic-sprouts": "香辣豆腐干炒蒜苗",
@@ -37,6 +43,7 @@ function RecipeCard(props) {
 		"steamed-eggplant-with-spicy-garlic-sauce": "清蒸茄子",
 		"shredded-lemon-chicken-salad": "柠檬手撕鸡肉丝",
 		"red-braised-beef-noodles": "红烧牛肉面",
+		"seaweed-eggdrop-soup": "紫菜蛋花汤",
 	};
 
 	// Get the Chinese name based on the English name
