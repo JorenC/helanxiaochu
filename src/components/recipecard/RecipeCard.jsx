@@ -35,6 +35,8 @@ function RecipeCard(props) {
 		"sichuan-mala-chicken": "辣子鸡",
 		"sesame-cucumber-salad": "芝麻将黄瓜",
 		"steamed-eggplant-with-spicy-garlic-sauce": "清蒸茄子",
+		"shredded-lemon-chicken-salad": "柠檬手撕鸡肉丝",
+		"red-braised-beef-noodles": "红烧牛肉面",
 	};
 
 	// Get the Chinese name based on the English name
