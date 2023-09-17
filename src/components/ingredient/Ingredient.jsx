@@ -1,6 +1,6 @@
 import React from "react";
 import styles from "./Ingredient.css";
-import jsonData from "./chinesetranslations.json";
+import jsonData from "../../assets/chinesetranslations.json";
 
 function Ingredient(props) {
 	const { name, notes, amount, index } = props;
