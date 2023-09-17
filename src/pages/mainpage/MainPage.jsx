@@ -10,7 +10,7 @@ export default function MainPage() {
   const filteredRecipes = Object.entries(recipesData).filter(
     ([recipeName, recipeData]) =>
       recipeName.toLowerCase().includes(searchInput.toLowerCase()) ||
-      recipeData.toLowerCase().includes(searchInput.toLowerCase())
+      recipeData.toLowerCase().includes(searchInput.toLowerCase()),
   );
 
   const handleSearchInputChange = (event) => {
