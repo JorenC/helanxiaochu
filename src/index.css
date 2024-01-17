@@ -6,14 +6,24 @@
     --highlight-color: rgb(205, 22, 25);
     --transparent-highlight-color: rgba(205, 22, 25, 0.03)
     --background-color: #ffffff;
-
   }
+ h1 {
+    color: rgb(0, 0, 0);
+ }
 }
 
 @media (prefers-color-scheme: dark) {
   :root {
-    --color: rgb(100, 22, 25);
-    --background-color: #ffffff;
+
+    --text-color: rgba(255,255,255,0.87);
+    --title-color: rgb(255,255,255);
+    --subtext-color: rgba(255, 255, 255, 0.37);
+    --highlight-color: rgb(205, 22, 25);
+    --transparent-highlight-color: rgba(205, 22, 25, 0.03)
+    --background-color: #000000;
+ }
+ h1 {
+   color: rgb(255, 255, 255);
  }
 }
 
