@@ -11,6 +11,7 @@ import Remark from "../../components/remark/Remark";
 import styles from "./RecipePage.css";
 //import { useRecipeFetcher } from "../../components/userecipefetcher/UseRecipeFetcher";
 import recipesData from "../../assets/recipes/recipes.js"; // Import the recipesData object
+import chinesenames from "../../assets/data/chinesenames.json"; // Assuming you have this file to map names
 
 function RecipeCard() {
   const recipeParams = useParams();
@@ -18,10 +19,10 @@ function RecipeCard() {
   console.log(currentRecipe);
   let recipeString = recipesData[currentRecipe];
 
-  //Convert the recipe
+  // Convert the recipe
   const recipe = new Recipe(recipeString);
 
-  //Check if there is a remark in the recipe. If so, store it.
+  // Check if there is a remark in the recipe. If so, store it.
   const remarkMetadata = recipe.metadata.find(
     (metadata) => metadata.key === "remark"
   );
@@ -34,32 +35,36 @@ function RecipeCard() {
       <div className="recipeCard">
         <div className="recipeCardIngredients">
           <h1>INGREDIENTS</h1>
-          {recipe.ingredients.map((ingredient, index) => (
-            <div key={index}>
-              <Ingredient
-                name={ingredient.name}
-                notes={
-                  ingredient.amount.includes("//") ||
-                  ingredient.units.includes("//")
-                    ? ingredient.amount.split("//")[1] ||
-                      ingredient.units.split("//")[1]
-                    : ""
-                }
-                amount={
-                  isNaN(ingredient.quantity) || ingredient.quantity === 0
-                    ? ingredient.amount.includes("//")
-                      ? ingredient.amount.split("//")[0]
-                      : ingredient.amount
-                    : ingredient.quantity +
-                      " " +
-                      (ingredient.units.includes("//")
-                        ? ingredient.units.split("//")[0]
-                        : ingredient.units)
-                }
-                index={index} // Pass the index as a prop
-              />{" "}
-            </div>
-          ))}
+          {recipe.ingredients.map((ingredient, index) => {
+            // Split amount and unit if there are "//" marks
+            const [amount, note] = ingredient.amount.includes("//")
+              ? ingredient.amount.split("//").map((str) => str.trim())
+              : [ingredient.amount, ""]; // Default values if "//" isn't present
+
+            const [unit, unitNote] = ingredient.units.includes("//")
+              ? ingredient.units.split("//").map((str) => str.trim())
+              : [ingredient.units, ""];
+
+            const notes = note || unitNote || ""; // Combine both notes if present
+
+            // Look up the Chinese name for the ingredient
+            const chineseName = chinesenames[ingredient.name.toLowerCase()] || ingredient.name;
+
+            return (
+              <div key={index}>
+                <Ingredient
+                  name={chineseName} // Ensure the Chinese name is used
+                  notes={notes} // Notes extracted from amount/unit
+                  amount={
+                    isNaN(ingredient.quantity) || ingredient.quantity === 0
+                      ? amount // Use cleaned-up amount
+                      : ingredient.quantity + " " + unit // Combine quantity and cleaned-up unit
+                  }
+                  index={index} // Pass the index as a prop
+                />
+              </div>
+            );
+          })}
           {/* Render the remark if it exists */}
           {remark && <Remark remark={remark} />}
         </div>
